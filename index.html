@@ -1,0 +1,43 @@
+//O objetivo deste trabalho é desenvolver um sistema em PHP e MySQL Workbench 
+para apoiar a Campanha Novembro Azul, que incentiva os homens a cuidarem da 
+saúde e realizarem o exame preventivo de próstata. 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Novembro azul</title>
+</head>
+<body>
+ <header> <h1>Novembro azul</h1></header>
+    <main>
+        <section>
+            <form action="index.php" method="post"> 
+                
+                <input type="text" name="nome" placeholder="Coloque seu nome" required>
+                <label for="nome" name="nome">Nome</label><br><br>
+                
+                
+                <input type="text" name="cpf" minlength="11" maxlength="11" placeholder="Coloque seu cpf " required>
+                <label for="cpf" name="cpf">Digite seu CPF </label><br><br>
+
+                <input type="number" name="idade" required>
+
+                <input type="date" name="data_preferida" required>
+                <label for="data_preferida"> Data do atendimento </label><br><br>
+                
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <span> feito por Gabriel,Marco Túlio, Emanuelly e João pedro</span>
+    </footer>
+ 
+</body>
+</html>
+//  sistema permite que o usuário: 
+// • Cadastre seu nome, CPF, idade e data da consulta, e que essas informações 
+sejam salvas no banco de dados MySQL Workbench; 
+• Utilize o CPF cadastrado para acessar uma segunda página com dicas de 
+prevenção e informações educativas sobre o câncer de próstata.
