@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    background-color: #02A9ED;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+
+
+
+.popAp {
+    background: rgba(255, 255, 255, 0.2); /* leve transparência branca */
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 500px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+.popAp h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.popAp p {
+    font-size: 1rem;
+}
+
+.popAp a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.popAp a:hover {
+    color: #027bc4;
+}
+
+
+
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: space-between;
+   
+}
+
+label {
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+}
+/* Importante Caso Eu Nao tiver Para Explicar o Css que eu fiz esse [type="..."] serve para selecionar no html os input com o tipo especifico*/
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+}
+
+input[type="submit"] {
+    background-color: #fff;
+    color: #02A9ED;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* Esse "hover" serve para quando o o mouse tivem em cima */
+input[type="submit"]:hover {
+    background-color: #027bc4;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 0.9rem;
+}
