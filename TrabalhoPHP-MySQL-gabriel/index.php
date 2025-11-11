@@ -36,7 +36,7 @@ if (isset($_POST['cpf'])) {
     $idade = $_POST['idade'];
     $data_preferida = $_POST['data'];
 
-    $conn = new mysqli("127.0.0.1", 'root', '', 'novembroazul', '3306');
+    $conn = new mysqli("127.0.0.1", 'root', 'aluno', 'novembroazul', '3307');
 
     if ($conn->connect_error) {
         die("<p style='color:red;'>Erro na conexão com o banco de dados: " . $conn->connect_error . "</p>");
@@ -47,7 +47,7 @@ if (isset($_POST['cpf'])) {
     $resultado = $conn->query($verifica);
 
     if ($resultado && $resultado->num_rows > 0) {
-        // CPF já cadastrado
+        // se o cpf estiver cadastrado
         echo "<p style='color:orange; font-weight:bold;'>
                 ⚠️ Este CPF já possui um cadastro!<br>
                 <a href='ConsultarCadastro.php' style='color:blue; text-decoration:underline;'>
@@ -55,8 +55,8 @@ if (isset($_POST['cpf'])) {
                 </a>
               </p>";
     } else {
-        // Insere novo registro
-        $sql = "INSERT INTO usuarios (nome, cpf, idade, data)
+        // Insere novo cadastro
+        $sql = "INSERT INTO usuarios (nome,cpf,idade,data)
                 VALUES ('$nome','$cpf','$idade','$data_preferida')";
 
         if ($conn->query($sql) === TRUE) {

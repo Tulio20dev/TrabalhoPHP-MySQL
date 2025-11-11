@@ -13,10 +13,10 @@
     //CONEXÃO COM O BANCO DE DADOS
     $servidor = "127.0.0.1";
     $usuario = "root";
-    $senha = "";
+    $senha = "aluno";
     $banco = "novembroazul";
-    $porta = '3306';            
-    $conn = new mysqli("127.0.0.1",'root','','novembroazul','3306');
+    $porta = '3307';            
+    $conn = new mysqli("127.0.0.1",'root','aluno','novembroazul','3307');
 
     if ($conn->connect_error) {
         die("<p>❌ Erro na conexão com o banco: " . $conn->connect_error . "</p>");
